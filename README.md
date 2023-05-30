@@ -6,6 +6,7 @@ Coreboot.rom is an Intel GPU rom and nVidia is to be flashed only on laptops wit
 
 first time install:
 split the rom
+
 ` dd if=coreboot.rom of=bottom.rom bs=1M count=8 `
 
 ` dd if=coreboot.rom of=top.rom bs=1M skip=8 `
@@ -14,7 +15,7 @@ and then flash the corresponding chips:
 
 example: `sudo flashrom -p ch341a_spi -w bottom.rom`
 
-PS: it might be needed to add -c (name of the bios chip); I use ch341a programmer. if you intend to use another change the name of the programmer.
+PS: it might be needed to add -c (name of the bios chip); I use ch341a programmer. If you intend to use another change the name of the programmer.
 
 to flash (with coreboot already installed):
 
