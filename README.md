@@ -7,6 +7,7 @@ Coreboot.rom is an Intel GPU rom and nVidia is to be flashed only on laptops wit
 first time install:
 split the rom
 ` dd if=coreboot.rom of=bottom.rom bs=1M count=8 `
+
 ` dd if=coreboot.rom of=top.rom bs=1M skip=8 `
 
 and then flash the corresponding chips:
