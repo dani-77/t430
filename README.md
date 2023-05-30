@@ -4,7 +4,7 @@
 There are 2 bios files with names self explanatory;
 Coreboot.rom is an Intel GPU rom and nVidia is to be flashed only on laptops with nVidia GPU.
 
-first time install:
+*first time install:
 split the rom
 
 ` dd if=coreboot.rom of=bottom.rom bs=1M count=8 `
@@ -17,6 +17,6 @@ example: `sudo flashrom -p ch341a_spi -w bottom.rom`
 
 PS: it might be needed to add -c (name of the bios chip); I use ch341a programmer. If you intend to use another change the name of the programmer.
 
-to flash (with coreboot already installed):
+*to flash (with coreboot already installed):
 
 `sudo flashrom -p internal:laptop=force_I_want_a_brick -w name_of_the_rom.rom `
