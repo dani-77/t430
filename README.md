@@ -12,7 +12,9 @@ split the rom
 
 and then flash the corresponding chips:
 
+example: `sudo flashrom -p ch341a_spi -w bottom.rom`
 
+PS: it might be needed to add -c (name of the bios chip); I use ch341a programmer. if you intend to use another change the name of the programmer.
 
 to flash (with coreboot already installed):
 
