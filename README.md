@@ -15,10 +15,10 @@ dd if=coreboot.rom of=top.rom bs=1M skip=8 `
 ```
 and then flash the corresponding chips:
 ```shell
-sudo flashrom -p ch341a_spi -w bottom.rom`
+sudo flashrom -p ch341a_spi -w bottom.rom
 ```
 ```shell
-sudo flashrom -p ch341a_spi -w top.rom`
+sudo flashrom -p ch341a_spi -w top.rom
 ```
 
 PS: it might be needed to add -c (name of the bios chip); I use ch341a programmer. If you intend to use another change the name of the programmer.
